@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 <robot>
+  <legacyModeNS>true</legacyModeNS>
+
+  <gazebo reference="chassis">
+        <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_wheel">
+        <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="right_wheel">
+        <material>Gazebo/Black</material>
+  </gazebo>
 
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">

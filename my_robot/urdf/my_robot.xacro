@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 
-<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
 
@@ -13,7 +13,7 @@
   </joint>
 
   <joint name="camera_joint" type="fixed">
-    <origin xyz="0.2 0 0" rpy="0 0 0"/>
+    <origin xyz="0.21 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <parent link="chassis"/>
     <child link="camera" />
@@ -175,7 +175,7 @@
       <collision name='collision'>
         <origin xyz="0 0 0" rpy="0 0 0"/> 
         <geometry>
-          <box size=".05 .05 .05"/>
+          <box size=".01 .14 .01"/>
         </geometry>
       </collision>
 
@@ -183,7 +183,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <mesh filename="package://my_robot/meshes/realsense.dae"/>
-          <box size=".05 .05 .05"/>
+          <box size=".01 .14 .01"/>
         </geometry>
       </visual>
     </link>
@@ -217,18 +217,6 @@
       </visual>
 
     </link>
-
-    <gazebo reference="left_wheel">
-      <material>Gazebo/Orange</material>
-    </gazebo>
-
-    <gazebo reference="right_wheel">
-      <material>Gazebo/Orange</material>
-    </gazebo>
-
-    <gazebo reference="chassis">
-      <material>Gazebo/Orange</material>
-    </gazebo>
   
 </robot>
 
